@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #fff9fb;
+        }
+
+        header {
+            background-color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+
+        .recmenu {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 90%;
+            max-width: 1500px;
+            margin: auto;
+            height: 70px;
+        }
+        .midadi{
+            max-width: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        .logo {
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+            border-radius: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .élégance1 {
+            margin-right: 550px;
+            margin-top: 20px;
+        }
+
+        .élégance {
+            margin-top: 2%;
+        }
+
+        .rox {
+            line-height: 10px;
+        }
+
+        .kadia {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+            gap: 20px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .kadia a {
+            text-decoration: none;
+            color: black;
+        }
+
+        /* ✅ Checkbox cachée */
+        .tog {
+            display: none;
+        }
+
+        /* ✅ Hamburger caché sur desktop */
+        .hamburger {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        /* ✅ Menu visible sur desktop */
+        #navMenu {
+            display: block;
+        }
+
+        /* ✅ Quand checkbox cochée → menu visible sur mobile */
+        .tog:checked~#navMenu {
+            display: block;
+        }
+
+        /* premiére partie */
+        .p1 {
+            height: 550px;
+          
+            display: flex;
+            justify-content: space-between;
+            padding-top: 80px;
+            box-shadow: 0 0 5px 0 #000000;
+            background-color: white;
+            width: 90%;
+            max-width: 1200px;
+            margin: 80px auto 0 auto;
+        }
+
+        .pa {
+            width: 58%;
+            height: 100%;
+        }
+
+        .pb {
+            width: 40%;
+            height: 100%;
+        }
+
+        .bouton1 {
+            width: 200px;
+            border-radius: 20px;
+            border: none;
+            margin-top: 20px;
+            margin-left: 3%;
+        }
+
+        .br {
+            margin-left: 3%;
+        }
+
+        .bouton2 {
+            width: 150px;
+            height: 40px;
+            border-radius: 20px;
+            border: none;
+            margin-top: 20px;
+            margin-left: 3%;
+            background-color: blue;
+            color: white;
+            box-shadow: 0 0 3px 0 #000000;
+        }
+
+        .bouton3 {
+            width: 150px;
+            height: 40px;
+            border-radius: 20px;
+            border: none;
+            margin-top: 20px;
+            margin-left: 3%;
+            background-color: white;
+            color: black;
+            box-shadow: 0 0 3px 0 #000000;
+        }
+
+        .pére3 {
+            width: 90%;
+            height: 80px;
+            margin-left: 3%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 25px;
+        }
+
+        .r1 {
+            width: 30%;
+            height: 100%;
+            border-radius: 10px;
+            line-height: 10px;
+            box-shadow: 0 0 3px 0 #000000;
+        }
+
+        .p {
+            margin-left: 3%;
+        }
+
+        .h4 {
+            color: blue;
+            margin-left: 3%;
+        }
+
+        .photo {
+            width: 80%;
+            height: 500px;
+            background-color: white;
+            margin: 0 auto;
+            margin-top: 5px;
+            background-image: url('WhatsApp Image 2026-05-07 at 13.16.30.jpeg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            box-shadow: 0 0 3px 0 #000000;
+        }
+
+        /* deuxiéme partie */
+        .woury {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            height: auto;
+            margin-top: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .brt {
+            margin-left: 7%;
+        }
+
+        .woury1 {
+            width: 100%;
+            height: 150px;
+            box-shadow: 0 0 3px 0 #000000;
+            background-color: white;
+        }
+
+        .alioune {
+            margin-left: 10px;
+        }
+
+        .aliou {
+            margin-left: 10px;
+            width: 90%;
+            height: auto;
+        }
+
+        /* troisiéme partie */
+        .icons {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            height: auto;
+            margin-top: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        .icons1 {
+            width: 100%;
+            height: 100px;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+
+        .ahmadou {
+            text-align: center;
+        }
+
+        /* troisiéme partie */
+        .yeux {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            height: auto;
+            margin-top: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            border-radius: 10px;
+        }
+
+        .yeux1,
+        .yeux2,
+        .yeux3,
+        .yeux4,
+        .yeux5,
+        .yeux6 {
+            width: 100%;
+            height: 300px;
+            border-radius: 10px;
+            box-shadow: 0 0 3px 0 #000000;
+            background-color: white;
+        }
+
+        .bandit {
+            width: 100%;
+            height: 55%;
+            border-radius: 10px;
+            background-image: url('bamba.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .bandit2 {
+            width: 100%;
+            height: 55%;
+            border-radius: 10px;
+            background-image: url('cd3ec7afc561e46784b353fd80465496.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .bandit3 {
+            width: 100%;
+            height: 55%;
+            border-radius: 10px;
+            background-image: url('image.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .bandit4 {
+            width: 100%;
+            height: 55%;
+            border-radius: 10px;
+            background-image: url('d66eeaf6317890424833dc09cad5bbfb.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .bandit5 {
+            width: 100%;
+            height: 55%;
+            border-radius: 10px;
+            background-image: url('c78f0fec0eae4a2793e786f479754f3e.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .bandit6 {
+            width: 100%;
+            height: 55%;
+            border-radius: 10px;
+            background-image: url('d3177b5613c7ee3e47d7920807c3f1fc.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+     /* Structure flex pour la section contact */
+.chérif {
+    max-width: 100%;
+    height: auto;
+    min-height: 500px;
+    background-color: blue;
+    margin-top: 30px;
+    padding: 60px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+/* Colonne gauche */
+.gauche {
+    width: 55%;
+}
+
+/* Colonne droite boutons */
+.numéro {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 150px;
+    margin-left: 30px;
+}
+
+/* Bouton blanc */
+.btn-contact {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    background-color: white;
+    color: #0f3460;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.2s;
+}
+
+.btn-contact:hover {
+    background-color: #e8f0fe;
+    transform: translateY(-2px);
+}
+
+/* Bouton transparent */
+.btn-contact-outline {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    background-color: transparent;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    border: 2px solid rgba(255,255,255,0.4);
+    transition: all 0.2s;
+}
+
+.btn-contact-outline:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+/* Footer */
+.pied {
+    background-color: #0a0f1e;
+    color: #5a6a85;
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+}
+
+.nom-footer {
+    color: wheat;
+}
+       .brtc {
+            margin-left: 20%;
+            color: white;
+        }
+        .yaye{
+            width: 400px;
+            height: auto;
+        }
+        .coeur{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+           width: 400px;
+           height: 75px;
+                 margin-left: 5%;
+                 gap: 15px;
+           
+        }
+        .allah{
+            width: 50px;
+            height: 50px;
+         background-color: white;
+            border-radius: 10px;
+              font-size: 30px;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+        }
+        .niaw{
+            display: block;
+            line-height: 10px;
+            color: white;
+        }
+         
+  
+@media (max-width: 768px) {
+
+    /* ===== HEADER / MENU ===== */
+    
+    /* Le menu passe en ligne : logo à gauche, hamburger à droite */
+    .recmenu {
+        justify-content: space-between;
+        padding: 0 15px;
+        width: 100%;
+        position: relative;
+    }
+
+    /* On cache le nom et sous-titre sur mobile (trop large) */
+    .rox {
+        display: none;
+    }
+
+    /* On affiche le bouton hamburger ☰ */
+    .hamburger {
+        display: block;
+    }
+
+    /* Le menu est caché par défaut sur mobile */
+    #navMenu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background-color: white;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        z-index: 9999;
+    }
+
+    /* Quand on coche la checkbox → le menu s'affiche */
+    .tog:checked ~ #navMenu {
+        display: block;
+    }
+
+    /* Les liens du menu passent en colonne sur mobile */
+    .kadia {
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+        align-items: center;
+    }
+
+    /* ===== HERO (première partie) ===== */
+
+    /* La section hero passe en colonne sur mobile */
+    .p1 {
+        flex-direction: column;
+        height: auto;           /* hauteur automatique */
+        margin-top: 70px;       /* espace pour le header fixe */
+        padding-top: 20px;
+        width: 95%;
+    }
+
+    /* La partie texte prend toute la largeur */
+    .pa {
+        width: 100%;
+    }
+
+    /* La partie photo prend toute la largeur */
+    .pb {
+        width: 100%;
+    }
+
+    /* La photo est plus petite sur mobile */
+    .photo {
+        width: 90%;
+        height: 300px;
+        margin: 10px auto;
+    }
+
+    /* Les boutons hero centrés */
+    .bouton2, .bouton3 {
+        margin-left: 0;
+        margin: 10px 3%;
+    }
+
+    /* Les 3 stats (5+, 6+, 2026) passent en colonne */
+    .pére3 {
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+    }
+
+    /* Chaque stat prend toute la largeur */
+    .r1 {
+        width: 90%;
+        height: 60px;
+    }
+
+    /* ===== TITRES DE SECTIONS ===== */
+
+    /* Les titres ont moins de marge sur mobile */
+    .brt {
+        margin-left: 4%;
+    }
+
+    /* ===== À PROPOS (deuxième partie) ===== */
+
+    /* La grille 2 colonnes passe en 1 colonne */
+    .woury {
+        grid-template-columns: 1fr;  /* 1 seule colonne */
+        width: 95%;
+    }
+
+    /* Les cartes à propos ont une hauteur automatique */
+    .woury1 {
+        height: auto;
+        padding-bottom: 10px;
+    }
+
+
+    /* La grille 3 colonnes passe en 2 colonnes sur mobile */
+    .icons {
+        grid-template-columns: 1fr 1fr;  /* 2 colonnes */
+        width: 95%;
+    }
+
+    /* Sur très petit écran → 1 colonne */
+    /* (géré dans le media query 480px plus bas) */
+
+    /* ===== PROJETS (quatrième partie) ===== */
+
+    /* La grille 3 colonnes passe en 1 colonne */
+    .yeux {
+        grid-template-columns: 1fr;  /* 1 seule colonne */
+        width: 95%;
+    }
+
+    /* Chaque carte projet a une hauteur automatique */
+    .yeux1, .yeux2, .yeux3,
+    .yeux4, .yeux5, .yeux6 {
+        height: auto;
+    }
+
+    /* Les images des projets gardent une hauteur fixe */
+    .bandit, .bandit2, .bandit3,
+    .bandit4, .bandit5, .bandit6 {
+        height: 180px;
+    }
+
+    /* ===== CONTACT (fin de partie) ===== */
+
+    /* La section contact passe en colonne */
+    .chérif {
+        flex-direction: column;   /* colonne au lieu de ligne */
+        padding: 40px 5%;
+        height: auto;
+    }
+
+    /* La colonne gauche prend toute la largeur */
+    .gauche {
+        width: 100%;
+    }
+
+    /* Le bloc texte contact s'adapte */
+    .yaye {
+        width: 100%;
+    }
+
+    /* Les titres contact sans marge gauche excessive */
+    .brtc {
+        margin-left: 0;
+    }
+
+    /* Les items contact (email, localisation...) s'adaptent */
+    .coeur {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    /* La colonne droite (boutons) prend toute la largeur */
+    .numéro {
+        width: 100%;
+        margin-top: 20px;
+        margin-left: 0;
+    }
+
+    /* Les boutons contact prennent toute la largeur */
+    .btn-contact,
+    .btn-contact-outline {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* ===== FOOTER ===== */
+    .pied {
+        padding: 15px;
+        font-size: 12px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    /* Compétences en 1 colonne sur très petit écran */
+    .icons {
+        grid-template-columns: 1fr;
+    }
+
+    /* Texte hero plus petit */
+    .br {
+        font-size: 14px;
+    }
+
+    /* Boutons hero plus petits */
+    .bouton2, .bouton3 {
+        width: 130px;
+        font-size: 13px;
+    }
+}
+      
+       
+    </style>
+</head>
+
+<body>
+    <!-- menu -->
+    <header>
+        <div class="recmenu">
+           <div class="midadi">
+             <div class="logo">
+                <h2>MS</h2>
+            </div>
+            <div class="rox">
+                <h3 class="élégance1">Mohamed sylla</h3>
+                <p class="élégance">Portfolio étudiant professsionelle</p>
+            </div>
+           </div>
+
+            <!-- ✅ Checkbox + label AVANT le nav et FRÈRES DIRECTS -->
+            <input type="checkbox" id="toggle" class="tog">
+            <label for="toggle" class="hamburger">☰</label>
+
+           
+            <nav id="navMenu">
+                <ul class="kadia">
+                    <li><a href="#Acceuil">Accueil</a></li>
+                    <li><a href="#Apropos">A propos</a></li>
+                    <li><a href="#Compétences">Compétences</a></li>
+                    <li><a href="#Projet">Projet</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- premiére partie -->
+    <div class="p1" id="Acceuil">
+        <div class="pa">
+            <button class="bouton1">Disponible pour des projets</button>
+            <h1 class="br">Mohamed</h1>
+            <h1 class="br">Sylla</h1>
+            <p class="br">Étudiant en développement web à ESP 221 — passionné par le <br>design numérique, le code et
+                les
+                réseaux. Je crée des interfaces <br> modernes et des expériences web soignées.</p>
+            <button class="bouton2">voir mes projets</button>
+            <button class="bouton3">Me contacter</button>
+            <div class="pére3">
+                <div class="r1">
+                    <h4 class="h4">5+</h4>
+                    <p class="p">Projets réalisés</p>
+                </div>
+                <div class="r1">
+                    <h4 class="h4">6+</h4>
+                    <p class="p">Compétences</p>
+                </div>
+                <div class="r1">
+                    <h4 class="h4">2026</h4>
+                    <p class="p">En formation</p>
+                </div>
+            </div>
+        </div>
+        <div class="pb">
+            <div class="photo"></div>
+        </div>
+    </div>
+    <!-- deuxiéme partie -->
+    <h3 class="brt" id="Apropos">Qui je suis</h3>
+    <h1 class="brt">A propos de moi</h1>
+    <p class="brt">Étudiant passionné à ESP 221, je combine créativité et technique pour <br>concevoir des solutions web
+        modernes.</p>
+    <div class="woury">
+        <div class="woury1">
+            <h3 class="alioune"> Mon parcours</h3>
+            <div class="aliou"><span>Étudiant en développement web à l'École Supérieure Professionnelle 221 (ESP 221) à
+                    Dakar. Je me forme aux métiers du numérique avec un cursus couvrant le web, le design, les réseaux
+                    et la programmation.</span></div>
+        </div>
+        <div class="woury1">
+            <h3 class="alioune">Mes objectifs</h3>
+            <div class="aliou"><span>Développer des compétences solides en développement web full-stack, maîtriser les
+                    outils de design numérique et contribuer à des projets concrets qui apportent de la valeur.</span>
+            </div>
+        </div>
+        <div class="woury1">
+            <h3 class="alioune">Mes qualités</h3>
+            <div class="aliou"><span>Curieux, rigoureux et créatif. J'aime apprendre de nouvelles technologies,
+                    travailler en équipe et produire des interfaces propres, modernes et fonctionnelles.</span></div>
+        </div>
+        <div class="woury1">
+            <h3 class="alioune">Ce que je recherche</h3>
+            <div class="aliou"><span>Des opportunités de stage, des collaborations académiques et des projets pratiques
+                    qui me permettront de progresser et d'appliquer mes compétences dans un environnement
+                    professionnel.</span></div>
+        </div>
+    </div>
+    <!-- troisiéme partie -->
+    <h3 class="brt">Mes outils</h3>
+    <h1 class="brt">Compétences</h1>
+    <p class="brt">Un ensemble de compétences techniques et créatives acquises à travers <br>mes cours et projets
+        personnels.</p>
+    <div class="icons" id="compétences">
+        <div class="icons1">
+            <h2 class="ahmadou">HTML/CSS</h2>
+            <p class="ahmadou">Intégration web</p>
+        </div>
+        <div class="icons1">
+            <h2 class="ahmadou">Canva</h2>
+            <p class="ahmadou">Design numérique</p>
+        </div>
+        <div class="icons1">
+            <h2 class="ahmadou">Réseau</h2>
+            <p class="ahmadou">IPv4, Cisco, Packet Tracer</p>
+        </div>
+        <div class="icons1">
+            <h2 class="ahmadou">PHP</h2>
+            <p class="ahmadou">Développement backend</p>
+        </div>
+        <div class="icons1">
+            <h2 class="ahmadou">Figma</h2>
+            <p class="ahmadou">Design UI/UX</p>
+        </div>
+        <div class="icons1">
+            <h2 class="ahmadou">Adobe Illustrator</h2>
+            <p class="ahmadou">Design graphique</p>
+        </div>
+    </div>
+    <!-- quatriéme partie -->
+    <h3 class="brt">Mes réalisations</h3>
+    <h1 class="brt">Projets</h1>
+    <p class="brt">Des projets académiques et personnels qui illustrent mes compétences en<br> design et développement web.
+    </p>
+    <div class="yeux" id="Projet">
+        <div class="yeux1">
+            <div class="bandit"></div>
+            <h3 class="alioune">SUNUGAL SPORT 221</h3>
+            <div class="aliou"><span>Site web premium pour un club de fitness fictif. Identité visuelle complète, site
+                    multi-pages avec slider hero, navigation JavaScript et design sombre élégant.</span></div>
+        </div>
+        <div class="yeux2">
+            <div class="bandit2"></div>
+            <h3 class="alioune">Design d'interfaces</h3>
+            <div class="aliou"><span>Conception de wireframes et maquettes UI/UX pour différents projets web.
+                    Utilisation de Figma pour créer des prototypes interactifs et des composants réutilisables.</span>
+            </div>
+        </div>
+        <div class="yeux3">
+            <div class="bandit3"></div>
+            <h3 class="alioune">Portfolio personnel</h3>
+            <div class="aliou"><span>Création de ce portfolio responsive avec menu hamburger CSS-only, sections animées
+                    et design clair & élégant. Projet de mise en valeur de mes compétences.</span></div>
+        </div>
+        <div class="yeux4">
+            <div class="bandit4"></div>
+            <h3 class="alioune">Projet réseau</h3>
+            <div class="aliou"><span>Configuration et simulation de réseaux avec Cisco Packet Tracer. Adressage IPv4,
+                    sous-réseaux, routage et configuration de switches et routeurs.</span></div>
+        </div>
+        <div class="yeux5">
+            <div class="bandit5"></div>
+            <h3 class="alioune">Application web PHP</h3>
+            <div class="aliou"><span>Développement d'une application web dynamique avec PHP et base de données MySQL.
+                    Gestion des formulaires, sessions et interaction avec les données.</span></div>
+        </div>
+        <div class="yeux6">
+            <div class="bandit6"></div>
+            <h3 class="alioune">Design graphique</h3>
+            <div class="aliou"><span>Création de supports visuels, affiches et identités graphiques avec Canva et Adobe
+                    Illustrator pour des projets académiques et personnels.</span></div>
+        </div>
+    </div>
+<!-- fin de partie -->
+<div class="chérif">
+
+    <!-- Colonne gauche : infos -->
+    <div class="gauche" id="Contact">
+        <div class="yaye">
+            <h3 class="brtc">Restons en contact</h3>
+            <h1 class="brtc">Contact</h1>
+            <p class="brtc">Ouvert aux opportunités de stage, collaborations académiques et projets web.</p>
+        </div>
+        <div class="coeur">
+            <div class="allah">📧</div>
+            <div class="niaw">
+                <h3>Email</h3>
+                <h2>nunosylla8@gmail.com</h2>
+            </div>
+        </div>
+        <div class="coeur">
+            <div class="allah">📍</div>
+            <div class="niaw">
+                <h3>Localisation</h3>
+                <h2>Dakar, Sénégal</h2>
+            </div>
+        </div>
+        <div class="coeur">
+            <div class="allah">🎓</div>
+            <div class="niaw">
+                <h3>École</h3>
+                <h2>ESP 221 — Dakar</h2>
+            </div>
+        </div>
+        <div class="coeur">
+            <div class="allah">💼</div>
+            <div class="niaw">
+                <h3>Statut</h3>
+                <h2>Étudiant • Disponible</h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- Colonne droite : boutons -->
+    <div class="numéro">
+        <a href="mailto:nunosylla8@gmail.com" class="btn-contact">
+            📧 Envoyer un email
+        </a>
+        <a href="#" class="btn-contact-outline">
+            📄 Télécharger mon CV
+        </a>
+    </div>
+
+</div>
+
+<!-- ✅ Footer -->
+<footer class="pied">
+    <p>© 2026 <span class="nom-footer">Mohamed Sylla</span> — Portfolio étudiant · ESP 221 · Dakar</p>
+</footer>
+
+</body>
+</html>
